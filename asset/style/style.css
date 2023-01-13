@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  height: 100vh;
+}
+
+.box {
+  width: 900px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  /* border: 1px solid salmon; */
+  transform-style: preserve-3d;
+  transform: rotate3d(1, 1, 1, -79deg) translateY(-40px) translateX(150px);
+}
+.box > ul {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* background-color: #80d0c7; */
+}
+
+.box > ul > li {
+  width: 100%;
+  height: 100px;
+  list-style-type: none;
+  border: 1px solid white;
+  overflow: hidden;
+  transition: 2s linear;
+}
+
+.box:hover li::before {
+  margin-top: -100px;
+}
+
+.box > ul > li:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+.box > ul > li:nth-of-type(3) {
+  transform: translate3d(0, -100px, 100px);
+}
+.box > ul > li:nth-of-type(4) {
+  transform: translate3d(0, -150px, 150px) rotateX(90deg);
+}
+.box > ul > li:nth-of-type(5) {
+  transform: translate3d(0, -200px, 200px);
+}
+.box > ul > li:nth-of-type(6) {
+  transform: translate3d(0, -250px, 250px) rotateX(90deg);
+}
+.box > ul > li:nth-of-type(7) {
+  transform: translate3d(0, -300px, 300px);
+}
+.box > ul > li:nth-of-type(8) {
+  transform: translate3d(0, -350px, 350px) rotateX(90deg);
+}
+
+.box > ul > li::after,
+.box > ul > li::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* background-color: rgba(255, 0, 0, 0.42); */
+  transition: 2s linear;
+  /* color: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: aliceblue;
+}
+
+.box > ul > li:nth-of-type(1)::before,
+.box > ul > li:nth-of-type(8)::after {
+  content: "yasaman";
+}
+.box > ul > li:nth-of-type(2)::before,
+.box > ul > li:nth-of-type(1)::after {
+  content: "tanaz";
+}
+.box > ul > li:nth-of-type(3)::before,
+.box > ul > li:nth-of-type(2)::after {
+  content: "mahak";
+}
+.box > ul > li:nth-of-type(4)::before,
+.box > ul > li:nth-of-type(3)::after {
+  content: "asal";
+}
+.box > ul > li:nth-of-type(5)::before,
+.box > ul > li:nth-of-type(4)::after {
+  content: "baran";
+}
+.box > ul > li:nth-of-type(6)::before,
+.box > ul > li:nth-of-type(5)::after {
+  content: "hasti";
+}
+.box > ul > li:nth-of-type(7)::before,
+.box > ul > li:nth-of-type(6)::after {
+  content: "nora";
+}
+.box > ul > li:nth-of-type(8)::before,
+.box > ul > li:nth-of-type(7)::after {
+  content: "nila";
+}
